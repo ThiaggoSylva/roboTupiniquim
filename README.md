@@ -166,4 +166,4 @@ dotnet run
 
 Thiago Silva
 
-![demonstração do robô](./docs/Gravação%20de%20tela%20-%2025%20de%20mar.%20de%202026,%20162744.gif)
+![Demo](./docs/demo.gif)
