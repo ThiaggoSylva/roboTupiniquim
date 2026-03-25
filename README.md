@@ -1,6 +1,18 @@
 # 🤖 Robô Tupiniquim I
 
+![.NET](https://img.shields.io/badge/.NET-6.0-blue)
+![C#](https://img.shields.io/badge/C%23-Console-green)
+![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+
 Aplicação console desenvolvida em **C#** que simula a movimentação de um robô em um plano cartesiano (grid), com base em comandos fornecidos pelo usuário.
+
+---
+
+## 🚀 Demonstração
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ThiaggoSylva/roboTupiniquim/main/docs/demo.gif" width="600"/>
+</p>
 
 ---
 
@@ -17,8 +29,6 @@ Cada comando é processado individualmente e, ao final, a posição do robô é 
 ---
 
 ## 🧭 Direções
-
-O robô pode estar orientado nas seguintes direções:
 
 | Letra | Significado |
 |------|------------|
@@ -53,29 +63,17 @@ ExibirPosicaoFinal(robo);
 
 🔹 Entrada de dados
 
-O usuário informa a posição inicial no formato:
-
+Formato esperado:
 X Y Direção
 
 Exemplo:
 1 2 N
 
-Depois, informa a sequência de comandos:
+Comandos:
 EMEMEMEMM
-
-🔹 Execução dos comandos
-
-foreach (char comando in comandos)
-{
-    MovimentacaoRobo.ExecutarComando(robo, comando);
-}
-
-Cada comando é enviado para a classe MovimentacaoRobo, responsável pela lógica de movimentação.
 
 🧠 Estrutura das Classes
 🧍 Classe Robo
-
-Responsável por armazenar o estado do robô:
 
 public class Robo
 {
@@ -92,10 +90,7 @@ public class Robo
 }
 
 🔄 Classe MovimentacaoRobo
-
-Classe estática responsável por executar os comandos.
-
-Execução de comandos:
+Execução de comandos
 
 if (comando == 'E')
     robo.Direcao = VirarEsquerda(robo.Direcao);
@@ -106,7 +101,7 @@ else if (comando == 'D')
 else if (comando == 'M')
     Mover(robo);
 
-Movimento do robô:
+Movimento
 
 switch (robo.Direcao)
 {
@@ -116,7 +111,7 @@ switch (robo.Direcao)
     case 'O': robo.X--; break;
 }
 
-Rotação do robô
+Rotação
 
 Direita (D):
 N → L → S → O → N
@@ -140,34 +135,44 @@ roboTupiniquim/
  ├── Program.cs
  ├── MovimentacaoRobo.cs
  ├── Robo.cs
+ └── docs/
+      └── demo.gif
 
- 🚀 Como Executar
+🚀 Como Executar
 
- git clone https://github.com/ThiaggoSylva/roboTupiniquim.git
+git clone https://github.com/ThiaggoSylva/roboTupiniquim.git
 cd roboTupiniquim
 dotnet run
 
-🧠 Conceitos Utilizados
->Programação Orientada a Objetos (POO)
->Separação de responsabilidades
->Métodos estáticos
->Estruturas condicionais (if, switch)
->Laço de repetição (foreach)
->Entrada e saída via console
+🧠 Conceitos Aplicados
+> Programação Orientada a Objetos (POO)
+> Separação de responsabilidades
+> Métodos estáticos
+> Estruturas condicionais (if, switch)
+> Laço de repetição (foreach)
+> Entrada e saída via console
 
-🧩 Possíveis Melhorias
- >Encapsular atributos da classe Robo (usar propriedades)
- >Validar entrada do usuário
- >Tratar comandos inválidos
- >Definir limites do grid
- >Implementar testes automatizados
+📈 Melhorias Futuras
+ . Encapsular atributos da classe Robo
+ . Validar entrada do usuário
+ . Tratar comandos inválidos
+ . Definir limites do grid
+ . Criar testes automatizados
 
  👨‍💻 Autor
 
 Thiago Silva
 
-## 🚀 Demonstração
+📄 Licença
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ThiaggoSylva/roboTupiniquim/main/docs/demo.gif"/>
-</p>
+Projeto desenvolvido para fins educacionais.
+
+⭐ Destaque
+
+Este projeto demonstra habilidades em:
+
+Lógica de programação
+Organização de código
+Estruturação de aplicações em C#
+
+Ideal como projeto de portfólio para iniciantes 🚀
